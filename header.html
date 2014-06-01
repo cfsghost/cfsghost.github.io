@@ -1,0 +1,19 @@
+<? 
+
+$subheadpos = strrpos($_SERVER["PHP_SELF"], "_ch.php");
+if ($subheadpos) {
+	$home_url = substr($_SERVER["PHP_SELF"], 0, strrpos($_SERVER["PHP_SELF"], "/")) . "/index_ch.php";
+	$chinese_url = $_SERVER["REQUEST_URI"];
+	$english_url = substr($_SERVER["PHP_SELF"], 0, $subheadpos) . ".php";
+} else {
+	$home_url = substr($_SERVER["PHP_SELF"], 0, strrpos($_SERVER["PHP_SELF"], "/")) . "/";
+	$english_url = $_SERVER["REQUEST_URI"];
+	$chinese_url = substr($_SERVER["PHP_SELF"], 0, strrpos($_SERVER["PHP_SELF"], ".php")) . "_ch.php";
+}
+
+?>
+<IMG SRC=images/logo.jpg><br>
+<TABLE CELLSPACING=0 CELLPADDING=0 BORDER=0 WIDTH=100%>
+<TR><TD WIDTH=160><IMG SRC=images/bar_l.jpg><A HREF=<? echo $home_url ?>><IMG SRC=images/homepage.jpg BORDER=0></A></TD>
+<TD BACKGROUND=images/bar_bg.jpg ALIGN=RIGHT VALIGN=TOP><A HREF="<? echo $chinese_url ?>"><IMG SRC=images/chinese.jpg BORDER=0></A><A HREF="<? echo $english_url ?>"><IMG SRC=images/english.jpg BORDER=0></A></TD><TD WIDTH=20><IMG SRC=images/bar_r.jpg></TD></TR>
+</TABLE>

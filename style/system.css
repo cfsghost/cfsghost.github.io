@@ -1,0 +1,7 @@
+body{background:#32393f}
+body *{color:#ffffff;font-family:Tahoma; font-size:9pt;line-height:160%;}
+A{color: #bcd6ec; text-decoration: none}
+A:hover{color:#ffcc00; text-decoration: none}
+input{border: 1px solid #AAAAAA;background:#F0F0F0}
+li{padding:5px;}
+.photo{background:#f9f9f9;padding:10px;padding-bottom:40px;border:1px solid #333333;}
